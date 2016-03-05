@@ -10,7 +10,7 @@ for (let i = 1; i < 40; i++) {
   request(url, (err, res, html) => {
     if (!err) {
       const $ = cheerio.load(html);
-      
+
       const $quoteBlock = $(".boxyPaddingBig");
       let count = $quoteBlock.length;
       $quoteBlock.each(function() {
@@ -19,7 +19,7 @@ for (let i = 1; i < 40; i++) {
         const obj = { quote, author };
         arr.push(obj);
         count--;
-        
+
         if(count===0 && i===39) {
           writeJSON();
         }
@@ -31,7 +31,7 @@ for (let i = 1; i < 40; i++) {
 }
 
 function writeJSON(){
-  fs.writeFile('carQuotes.json', JSON.stringify(arr), function(err){
+  fs.writeFile('carQuotes.js', JSON.stringify(arr), function(err){
     console.log('hit')
   })
 }

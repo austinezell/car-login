@@ -16,10 +16,12 @@ body{
   height: 100vh;
 }
 
-/*.ui-view-container {
+.quote-view{
+  overflow: hidden;
+  height: 100%;
   position: relative;
-  height: 65px;
-}*/
+}
+
 .form-view{
   overflow: hidden;
   height: 100%;

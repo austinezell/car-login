@@ -11,25 +11,35 @@ app.config(function($stateProvider, $urlRouterProvider){
   })
   .state('auth.login',{
     url: '/login',
-    templateUrl: "templates/login.html"
-    // views: {
-    //   "quote@auth": {
-    //     templateUrl: "templates/quote.html"
-    //   }
-    // }
+    views: {
+      "quote@auth": {
+        templateUrl: "templates/quote.html",
+        controller: function($scope){
+          $scope.quote = carQuotes[Math.floor(Math.random()*carQuotes.length)]
+        }
+      },
+      "form@auth": {
+        templateUrl: "templates/login.html"
+      }
+    }
   })
   .state('auth.register',{
     url: '/register',
-    templateUrl: "templates/register.html"
-    // views: {
-    //   "quote@auth":{
-    //     templateUrl: "templates/quote.html"
-    //   }
-    // }
+    views: {
+      "quote@auth": {
+        templateUrl: "templates/quote.html",
+        controller: function($scope){
+          $scope.quote = carQuotes[Math.floor(Math.random()*carQuotes.length)]
+        }
+      },
+      "form@auth": {
+        templateUrl: "templates/register.html"
+      }
+    }
   })
 
 })
 
 app.controller("loginCtrl",function($scope){
-  console.log('hi');
+  $scope.quote = {}
 })
