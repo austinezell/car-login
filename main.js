@@ -37,9 +37,8 @@ app.config(function($stateProvider, $urlRouterProvider){
       }
     }
   })
-
 })
 
-app.controller("loginCtrl",function($scope){
-  $scope.quote = {}
+app.controller("loginCtrl",function($scope, $state){
+  $scope.quote = {};
 })
