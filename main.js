@@ -5,25 +5,25 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider
   .state('auth',{
     url: '/auth',
-    templateUrl: "auth.html",
+    templateUrl: "templates/auth.html",
     abstract: true,
     controller: "loginCtrl"
   })
   .state('auth.login',{
     url: '/login',
-    templateUrl: "./login.html"
+    templateUrl: "templates/login.html"
     // views: {
     //   "quote@auth": {
-    //     templateUrl: "./quote.html"
+    //     templateUrl: "templates/quote.html"
     //   }
     // }
   })
   .state('auth.register',{
     url: '/register',
-    templateUrl: "./register.html"
+    templateUrl: "templates/register.html"
     // views: {
     //   "quote@auth":{
-    //     templateUrl: "./quote.html"
+    //     templateUrl: "templates/quote.html"
     //   }
     // }
   })
