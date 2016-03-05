@@ -22,6 +22,31 @@ body{
   position: relative;
 }
 
+.quote-view.ng-enter, .quote-view.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition:all .5s ease-in-out;
+}
+
+.quote-view.ng-enter {
+  transition-delay: .5s;
+  transform: scaleY(0);
+}
+
+.quote-view.ng-enter-active {
+  transform: scaleY(1);
+}
+
+.quote-view.ng-leave {
+  transform: scaleY(1);
+}
+
+.quote-view.ng-leave-active {
+  transform: scaleY(0);
+}
+
+
 .form-view{
   overflow: hidden;
   height: 100%;
@@ -35,11 +60,8 @@ body{
   transition:all .5s ease-in-out;
 }
 
-.form-view.ng-enter{
-  transition-delay: .3s;
-}
-
 .form-view.ng-enter {
+  transition-delay: .3s;
   transform: translateY(-100%);
 }
 
